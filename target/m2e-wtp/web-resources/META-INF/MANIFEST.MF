@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Add-Opens: java.base/java.util java.base/java.lang
+Created-By: Maven Integration for Eclipse
+
