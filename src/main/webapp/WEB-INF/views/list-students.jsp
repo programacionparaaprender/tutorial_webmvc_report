@@ -106,7 +106,7 @@
                                 Eliminar
                             </a>
 							<!-- Botón Editar -->
-                            <a href="${pageContext.request.contextPath}/report" 
+                            <a href="${pageContext.request.contextPath}/report/${student.id}" 
                                class="button edit">
                                 Ver PDF
                             </a>
