@@ -1,7 +1,8 @@
 package carmelo.spring.service;
 
-import carmelo.spring.model.Customer;
 import java.util.List;
+
+import carmelo.spring.model.Customer;
 
 public interface CustomerService {
 

@@ -1,8 +1,7 @@
 package carmelo.spring.controller;
 
-import carmelo.spring.service.CustomerService;
-
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,6 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.luv2code.jsf.jdbc.Student;
 import com.luv2code.jsf.jdbc.StudentDbUtil;
+
+import carmelo.spring.model.Customer;
+import carmelo.spring.service.CustomerService;
 
 @Controller
 public class CustomerController {
@@ -47,10 +49,12 @@ public class CustomerController {
                     required = false) String format) {
     	try {
             Student student = studentDbUtil.getStudent(id);
+            List<Student> listStudent = new LinkedList<Student>();
+            listStudent.add(student);
             model.addAttribute("student", student);
-            
             model.addAttribute("format", format);
-            model.addAttribute("datasource", customerService.findAll());
+            model.addAttribute("datasource", listStudent);
+            //model.addAttribute("datasource", customerService.findAll());
             model.addAttribute("param1String", student.getFirstName());
             model.addAttribute("param2String", student.getLastName());
             

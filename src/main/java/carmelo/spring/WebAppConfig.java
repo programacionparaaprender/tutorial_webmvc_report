@@ -21,7 +21,7 @@ public class WebAppConfig {
     @Bean
     public JasperReportsViewResolver getJasperReportsViewResolver() {
         JasperReportsViewResolver resolver = new JasperReportsViewResolver();
-        resolver.setPrefix("classpath:/jasperreports/");
+        resolver.setPrefix("classpath:/reports/");
         resolver.setSuffix(".jasper");
         resolver.setReportDataKey("datasource");
         resolver.setViewNames("*_report");

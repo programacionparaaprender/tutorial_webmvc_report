@@ -2,8 +2,10 @@ package carmelo.spring.service;
 
 import java.util.Arrays;
 import java.util.List;
-import carmelo.spring.model.Customer;
+
 import org.springframework.stereotype.Service;
+
+import carmelo.spring.model.Customer;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
